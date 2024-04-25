@@ -1,4 +1,4 @@
-import ListItem from "./ListItem"
+import ListItem from "./ListItem";
 
 const List = (props) => {
     const {list, changeStatus} = props;
@@ -6,7 +6,7 @@ const List = (props) => {
     const content = (list) => {
         const result = list.map((item) => {
             return(
-                <ListItem data={item} changeStatus={changeStatus} key={item.id} deleteItem={props.deleteItem}/>
+                <ListItem data={item} changeStatus={changeStatus} key={item.id} deleteItem={props.deleteItem} editItem={props.editItem} updateItem={props.updateItem}/>
             )
         })
 
